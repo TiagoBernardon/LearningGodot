@@ -1,2 +1,2 @@
 # LearningGodot
-Godot study projects.
+Godot Engine study projects.
