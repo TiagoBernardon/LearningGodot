@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id=2]
+bounce = 1.0
+
+[node name="Main" type="Node2D"]
+
+[node name="PlatformContainer" type="Node" parent="."]
+
+[node name="Platform" parent="PlatformContainer" instance=ExtResource( 1 )]
+position = Vector2( 173.948, 343.382 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Platform2" parent="PlatformContainer" instance=ExtResource( 1 )]
+position = Vector2( 502.033, 343.382 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Platform3" parent="PlatformContainer" instance=ExtResource( 1 )]
+position = Vector2( 828.334, 343.382 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="BallContainer" type="Node" parent="."]
+
+[node name="Ball" parent="BallContainer" instance=ExtResource( 2 )]
+position = Vector2( 173.112, 143.012 )
+
+[node name="Ball2" parent="BallContainer" instance=ExtResource( 2 )]
+position = Vector2( 501.374, 143.012 )
+physics_material_override = SubResource( 1 )
+
+[node name="Ball3" parent="BallContainer" instance=ExtResource( 2 )]
+position = Vector2( 827.725, 143.012 )
+physics_material_override = SubResource( 2 )
+
+[node name="LabelContainer" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="LabelContainer"]
+margin_left = 106.607
+margin_top = 374.95
+margin_right = 241.607
+margin_bottom = 412.95
+text = "BOUNCE: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="LabelContainer"]
+margin_left = 435.946
+margin_top = 374.95
+margin_right = 570.946
+margin_bottom = 412.95
+text = "BOUNCE: 0.5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="LabelContainer"]
+margin_left = 761.749
+margin_top = 374.95
+margin_right = 896.749
+margin_bottom = 412.95
+text = "BOUNCE: 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
