@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SimpleCounter"
-run/main_scene="res://SayHello.tscn"
+run/main_scene="res://Counter.tscn"
 config/icon="res://icon.png"
 
 [rendering]
